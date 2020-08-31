@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="JavaScript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        BODY {
+            margin: 20px 0px 20px 0px;
+            background-color: #786662;
+            font-family: arial;
+            font-size: 12pt;
+        }
+        .page {
+            display: block;
+            width: 800px;
+            min-height: 490px;
+            overflow: auto;
+            margin: 0px auto 0px auto;
+            box-sizing: border-box;
+        }
+        .pageHeader {
+            background-color: #00e0d9;
+            float: left;
+            clear: none;
+            min-height: 50px;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        .pageRightPanel {
+            background-color: #7a69af; 
+            float: right;
+            clear: none;
+            min-height: 300px;
+            width: 200px;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        .pageContent {
+            background-color: #FFFFFF;
+            float: left;
+            clear: none;
+            min-height: 300px;
+            width: 600px;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        .pageFooter {
+            background-color: #0080bf;
+            float: left;
+            clear: none;
+            min-height: 110px;
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        .External {
+            background-color: green;
+        }
+        ul {
+            list-style: none;
+            max-height: 250px;
+            margin: 0;
+            overflow: auto;
+            padding: 0;
+            text-indent: 10px;
+        }
+        li {
+            border: 1px solid #ddd;
+            margin-top: -1px; /* Prevent double borders */
+            background-color: #f6f6f6;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 10px;
+            color: black;
+            display: block;
+            position: relative;
+        }
+       .dragging {
+            background-image: url('dropzone.png');
+            float: right;
+            clear: none;
+            min-height: 300px;
+            width: 200px;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        ul li:hover {
+            background-color: orangered;
+        }
+        .close {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            right: 0%;
+            padding: 12px 16px;
+            transform: translate(0%, -50%);
+        }
+        .close:hover {
+                background: #bbb;
+        }
+        li.clicked {
+            background-color: orangered;
+        }
+        pre {
+            font-size:small;
+        }
+    </style>
+    <title>Page Title</title>
+
+
+</head>
+<body>
+    <div class="page">
+        <div class="pageHeader" id="head">
+            My Flight Control
+        </div>
+        <div class="pageContent" id="map">
+            Map
+        </div>
+        <div class="pageRightPanel" id="prpanddp">
+            Drop me here
+            <ul id="ulFlights" class="''">
+
+            </ul>
+        </div>
+        <div id="flightdata" class="pageFooter">
+
+        </div>
+    </div>
+    <script>
+        setInterval(load1sec, 2000);
+        clickanywhere();
+        draganddropVar();
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9jvRqnrqhcdA0b1gWUEBNxNAlLdLd8FA&callback=initMap"
+            async defer>
+    </script>
+</body>
+</html >
+
+
