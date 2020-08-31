@@ -29,4 +29,4 @@ example to flight plan(json):
 }
 
 to use the app download all the code and then click on the exe file found here: out\FlightControlWeb.exe
-and make some jsons as above, the time should be relative to UTC.
+also make some jsons as above and drop them to the drop area (note:the time should be relative to UTC.)
